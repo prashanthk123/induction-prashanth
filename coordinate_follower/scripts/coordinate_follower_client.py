@@ -18,9 +18,11 @@ class CoordinateFollowerClientNode(Node):
             self,
             CoordinateTraverse,
             "coordinate_follow")
-        
+        #replace path with your absolute file path
         path=r"/home/prashanth/Desktop/ros2/src/coordinate_follower/input.txt"
-
+        #the goals in the input.txt file must each be on seperate lines with the x and y components
+        #seperated by a space
+        #example: 1.0 2.3 this is read as a goal with x=1.0 and y=2.3
         with open(path,'r') as file:
             temp=[]
             for line in file:
